@@ -22,7 +22,7 @@ const helpTexts = {
 
 function renderBurger() {
   return `<button class="burger" id="burger-btn" aria-label="Open menu">
-    <span style="font-size:2rem;line-height:1;">&#10005;</span>
+    <span style="font-size:2rem;line-height:1;">&times;</span>
   </button>`;
 }
 

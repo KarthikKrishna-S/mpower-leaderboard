@@ -82,7 +82,7 @@ body {
   transform: translateX(0);
 }
 .sidebar .sidebar-title {
-  display: none;
+  display: none !important;
 }
 .sidebar .sidebar-link {
   color: #222;
@@ -512,6 +512,29 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  body {
+    background: #f4f7ff;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #app {
+    margin: 2.5rem auto;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(100,108,255,0.04);
+    min-height: 80vh;
+    max-width: 900px;
+    background: #fafbff;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
