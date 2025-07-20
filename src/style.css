@@ -514,3 +514,28 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media (min-width: 1200px) {
+  body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f7ff;
+    /* or your preferred background */
+  }
+  #app {
+    margin: 2.5rem auto;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(100,108,255,0.04);
+    min-height: 80vh;
+    max-width: 900px;
+    background: #fafbff;
+  }
+  h1 {
+    color: #213547;
+    background: none;
+    -webkit-text-fill-color: initial;
+    text-fill-color: initial;
+    text-shadow: none;
+  }
+}
