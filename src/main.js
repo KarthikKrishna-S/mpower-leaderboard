@@ -22,7 +22,16 @@ const helpTexts = {
 
 function renderBurger() {
   return `<button class="burger" id="burger-btn" aria-label="Open menu">
-    <span style="font-size:2rem;line-height:1;">&times;</span>
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="cross-gradient" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#646cff" />
+          <stop offset="1" stop-color="#21e6c1" />
+        </linearGradient>
+      </defs>
+      <line x1="6" y1="6" x2="22" y2="22" stroke="url(#cross-gradient)" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="22" y1="6" x2="6" y2="22" stroke="url(#cross-gradient)" stroke-width="3.5" stroke-linecap="round"/>
+    </svg>
   </button>`;
 }
 
