@@ -218,7 +218,7 @@ function handleHashChange() {
 
 async function fetchTeamsAndRender() {
   try {
-    const res = await fetch('http://mpower-leaderboard.onrender.com/api/teams');
+    const res = await fetch('https://mpower-leaderboard.onrender.com/api/teams');
     if (!res.ok) throw new Error('Failed to fetch teams');
     teams = await res.json();
     // Sort teams by score descending
