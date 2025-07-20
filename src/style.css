@@ -336,11 +336,8 @@ button:focus-visible {
   }
 }
 @media (max-width: 600px) {
-  body {
-    padding: 0.5rem;
-    min-height: 100vh;
-    box-sizing: border-box;
-    background: #fff;
+  .sidebar .sidebar-title {
+    display: none !important;
   }
   h1 {
     font-size: 2em;
@@ -354,13 +351,26 @@ button:focus-visible {
     letter-spacing: 0.04em;
     font-weight: 800;
   }
+  body {
+    background: #fafbff;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   #app {
-    margin-left: 0;
+    margin: 0;
     margin-top: 56px;
     padding: 1.2rem 0.3rem 1.2rem 0.3rem;
     border-radius: 0;
     box-shadow: none;
     background: #fafbff;
+    width: 100vw;
+    min-height: calc(100vh - 56px);
+    box-sizing: border-box;
   }
   .sidebar {
     width: 78vw;
