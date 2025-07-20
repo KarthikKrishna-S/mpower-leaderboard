@@ -2,7 +2,7 @@
   "name": "mPower Leaderboard",
   "short_name": "Leaderboard",
   "description": "Track and celebrate team scores in real time!",
-  "start_url": ".",
+  "start_url": "/?source=pwa",
   "display": "standalone",
   "background_color": "#fafbff",
   "theme_color": "#646cff",
