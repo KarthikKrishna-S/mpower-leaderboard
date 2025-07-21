@@ -5,6 +5,7 @@ const app = express();
 const PORT = 3001;
 
 app.use(cors());
+app.use(express.json());
 
 const teams = [
   { name: 'Alturos', score: 20313, logo: 'Alturos.jpg' },
@@ -19,6 +20,19 @@ const teams = [
 
 app.get('/api/teams', (req, res) => {
   res.json(teams);
+});
+
+app.post('/api/teams/update-score', (req, res) => {
+  const { name, delta } = req.body;
+  if (typeof name !== 'string' || typeof delta !== 'number') {
+    return res.status(400).json({ error: 'Invalid request' });
+  }
+  const team = teams.find(t => t.name === name);
+  if (!team) {
+    return res.status(404).json({ error: 'Team not found' });
+  }
+  team.score += delta;
+  res.json({ success: true, team });
 });
 
 app.listen(PORT, () => {
